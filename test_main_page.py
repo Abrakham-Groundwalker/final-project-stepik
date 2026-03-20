@@ -3,9 +3,6 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from pages.main_page import MainPage
 
-def should_be_login_link(self):
-    assert self.is_element_present(By.CSS_SELECTOR, "#login_link"), "Login link is not presented"
-
 def test_guest_can_go_to_login_page(browser):
     link = "http://selenium1py.pythonanywhere.com/"
     page = MainPage(browser, link)   # инициализируем Page Object, передаем в конструктор экземпляр драйвера и url адрес 
